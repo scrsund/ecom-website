@@ -31,9 +31,9 @@
     </section>
     <section id="sign-up" class="flex flex-col justify-center items-center space-y-4 my-20">
       <h2>Get exclusive deals</h2>
-      <div class="flex justify-between border-b border-black w-1/4">
-        <input type="email" class="tracking-wide text-sm w-full placeholder:text-[12px] placeholder:uppercase placeholder:tracking-wide focus:outline-none" placeholder="email address">
-        <button class="uppercase text-xs">Subscribe</button>
+      <div class="flex flex-col w-1/2 max-w-md">
+        <input type="email" class="tracking-wide text-sm border-b border-black w-full placeholder:text-[12px] placeholder:uppercase placeholder:tracking-wide focus:outline-none" placeholder="email address">
+        <button class="uppercase text-xs mt-2 text-right">Subscribe</button>
       </div>
     </section>
     <footer class="flex justify-between px-3 h-1/4 max-w-lg mt-32">
