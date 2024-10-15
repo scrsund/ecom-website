@@ -1,26 +1,78 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header class="flex justify-between items-center p-10">
+    <div class="header-items">
+      <a href="#">Shop</a>
+      <span class="hidden md:block">|</span>
+      <a href="#" class="hidden md:block">Search</a>
+    </div>
+    <h1 class="text-3xl tracking-widest ml-6 md:ml-0">Othelia</h1>
+    <div class="header-items">
+      <a href="#" class="hidden md:block">Account</a>
+      <a href="#">Bag <span class="tracking-widest">(0)</span></a>
+    </div>
+  </header>
+  <main class="h-screen w-full">
+    <section
+      id="hero"
+      class="relative flex items-center justify-center w-full h-[40rem]"
+    >
+      <img :src="img2" alt="" class="absolute h-full w-full object-cover object-center" />
+      <a
+        href="#"
+        class="z-10 border border-2 border-slate-600 p-4 text-zinc-300 shadow-xl text-md bg-slate-600 opacity-90 hover:opacity-70"
+        >Shop the collection</a
+      >
+    </section>
+    <section id="gallery" class="grid grid-cols-2 gap-2 mt-10">
+
+      <img :src="img1" alt="" class=""/>
+      <img :src="img3" alt="" />
+      <a href="#" class="px-3">Summer Sale</a>
+    </section>
+    <section id="sign-up" class="flex flex-col justify-center items-center space-y-4 my-20">
+      <h2>Get exclusive deals</h2>
+      <div class="flex justify-between border-b border-black w-1/4">
+        <input type="email" class="tracking-wide text-sm w-full placeholder:text-[12px] placeholder:uppercase placeholder:tracking-wide focus:outline-none" placeholder="email address">
+        <button class="uppercase text-xs">Subscribe</button>
+      </div>
+    </section>
+    <footer class="flex justify-between px-3 h-1/4 max-w-lg mt-32">
+      <!-- About Container-->
+       <div class="footer-container">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact Us</a>
+       </div>
+       <!-- Order Information -->
+       <div class="footer-container">
+        <h5>Orders</h5>
+        <a href="#">Returns</a>
+        <a href="#">Shipping</a>
+        <a href="#">FAQ</a>
+       </div>
+      <!-- Socials Container-->
+       <div class="footer-container">
+        <h5>Social</h5>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+       </div>
+    </footer>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      img1: "/images/image1.jpg",
+      img2: "/images/image2.jpg",
+      img3: "/images/image3.jpg",
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
