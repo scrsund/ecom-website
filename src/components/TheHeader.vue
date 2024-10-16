@@ -5,7 +5,7 @@
       <span class="hidden md:block">|</span>
       <a href="#" class="hidden md:block">Search</a>
     </div>
-    <h1 class="text-3xl tracking-widest ml-8 md:ml-0">Othelia</h1>
+    <h1 class="text-3xl tracking-widest ml-7 md:ml-0">Othelia</h1>
     <div class="header-items">
       <a href="#" class="hidden md:block">Account</a>
       <a href="#">Bag <span class="tracking-widest">(0)</span></a>
