@@ -7,10 +7,19 @@
     <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       <!-- Product Container -->
       <div v-for="product in products" :key="product.id">
-        <img :src="product.img" class="h-[300px] w-full object-cover">
+        <div class="relative group">
+          <img :src="product.img" class="h-[300px] w-full object-cover">
+          <div class="banner">
+            <div class="flex justify-center items-center">
+              <button class="uppercase tracking-wider">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
         <ul class="py-1 mb-4 ml-1">
-          <li class="text-xs">{{product.name}}</li>
-          <li class="text-xs">${{product.price}}</li>
+          <li>{{product.name}}</li>
+          <li>${{product.price}}</li>
         </ul>
       </div>
     </div>

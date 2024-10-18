@@ -11,11 +11,11 @@
       >
         <section id="menu" class="mb-4">
           <div>
-            <router-link to="/products/kitchen">Kitchen</router-link>
+            <router-link to="/products/furniture">Furniture</router-link>
             <hr />
           </div>
           <div>
-            <router-link to="/products/furniture">Furniture</router-link>
+            <router-link to="/products/kitchen">Kitchen</router-link>
             <hr />
           </div>
         </section>

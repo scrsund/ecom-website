@@ -30,7 +30,7 @@ export default {
           id: "5",
           img: "/images/products/kitchen/img5.jpg",
           name: "Metal bowl",
-          price: 29.99,
+          price: 34.99,
         },
       ],
       furniture: [
