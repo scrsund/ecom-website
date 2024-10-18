@@ -1,7 +1,7 @@
 <template>
-  <main class="h-screen py-5 mb-10">
-    <div class="text-center p-5">
-      <h1>{{ category }}</h1>
+  <main class="h-screen mb-10">
+    <div class="py-6">
+      <h1 class="text-center">{{ category }}</h1>
     </div>
     <!-- Gallery Container -->
     <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
