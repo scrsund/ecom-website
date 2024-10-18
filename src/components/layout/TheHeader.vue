@@ -12,14 +12,14 @@
       <router-link to="/home" class="text-3xl tracking-widest">Othelia</router-link>
       <div class="header-items justify-end">
         <a href="#" class="hidden md:block">Account</a>
-        <a href="#">Bag <span class="tracking-widest">(0)</span></a>
+        <a href="#">Bag <span class="tracking-widest">({{this.$store.getters.cart}})</span></a>
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapMutations} from 'vuex';
 import HamburgerButton from '../UI/HamburgerButton.vue';
 
 export default{

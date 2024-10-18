@@ -11,7 +11,7 @@
           <img :src="product.img" class="h-[300px] w-full object-cover">
           <div class="banner">
             <div class="flex justify-center items-center">
-              <button class="uppercase tracking-wider">
+              <button @click="handleAddToCart(product)" class="uppercase tracking-wider">
                 Add to cart
               </button>
             </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   computed: {
@@ -41,5 +41,13 @@ export default {
       return this.$route.params.category;
     },
   },
+  methods: {
+    ...mapMutations({
+      addItemToCart: 'addItemToCart'
+    }),
+    handleAddToCart(product){
+      this.addItemToCart(product);
+    }
+  }
 };
 </script>
