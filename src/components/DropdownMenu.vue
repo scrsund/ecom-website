@@ -11,15 +11,15 @@
       >
         <section id="menu">
           <div>
-            <router-link to="/items/kitchen">Kitchen</router-link>
+            <router-link to="/products/kitchen">Kitchen</router-link>
             <hr />
           </div>
           <div>
-            <router-link to="/items/lighting">Lighting</router-link>
+            <router-link to="/products/lighting">Lighting</router-link>
             <hr />
           </div>
           <div>
-            <router-link to="/items/furniture">Furniture</router-link>
+            <router-link to="/products/furniture">Furniture</router-link>
             <hr />
           </div>
         </section>
