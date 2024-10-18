@@ -10,6 +10,9 @@ const store = createStore({
     toggleMenu(state){
       state.isMenuOpen = !state.isMenuOpen;
     },
+    closeMenu(state){
+      state.isMenuOpen = false;
+    }
   },
 
 })

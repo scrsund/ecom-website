@@ -34,27 +34,26 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
-// import TheHeader from "./layout/TheHeader.vue";
 
 export default {
-  components: {
-    // TheHeader,
-  },
   computed: {
     ...mapState(["isMenuOpen"]),
   },
   methods: {
-    ...mapMutations(["toggleMenu"]),
+    ...mapMutations(["closeMenu"]),
     hideMenu() {
-      this.toggleMenu(false);
+      this.closeMenu(false);
     },
   },
-  // Stop scrolling when dropdown menu is open
   // watch: {
+  //   $route(){
+  //     this.hideMenu();
+  //   }
+  // }
+  // Stop scrolling when dropdown menu is open
   //   isMenuOpen(newVal) {
   //     document.body.style.overflow = newVal ? "hidden" : "";
   //   },
-  // },
 };
 </script>
 
