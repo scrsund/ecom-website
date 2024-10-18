@@ -7,7 +7,7 @@ body {
 }
 
 hr {
-  @apply mt-4 border-black;
+  @apply mt-2 border-black;
 }
 
 .header-items{
@@ -20,6 +20,10 @@ hr {
 
 footer h5 {
   @apply text-base mb-2
+}
+
+#menu div {
+  @apply p-2
 }
 
 /*Hamburger Menu*/

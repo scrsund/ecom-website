@@ -1,33 +1,39 @@
 <template>
-  <!-- <transition name="slide"> -->
-  <div
-    v-show="isMenuOpen"
-    id="menu"
-    class="fixed z-20 h-full w-full shadow-2xl md:w-1/4"
-    @mouseleave="hideMenu"
-  >
-    <section
-      class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-80"
+  <transition name="slide">
+    <div
+      v-show="isMenuOpen"
+      id="menu"
+      class="fixed z-20 h-full w-full shadow-2xl md:w-1/4"
+      @mouseleave="hideMenu"
     >
-      <div>
-        <a href="#">Kitchen</a>
-        <hr />
-      </div>
-      <div>
-        <a href="#">Lighting</a>
-        <hr />
-      </div>
-      <div>
-        <a href="#">Furniture</a>
-        <hr />
-      </div>
-    </section>
-  </div>
-  <!-- </transition> -->
+      <nav
+        class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-90"
+      >
+        <section id="menu">
+          <div>
+            <a href="#">Kitchen</a>
+            <hr />
+          </div>
+          <div>
+            <a href="#">Lighting</a>
+            <hr />
+          </div>
+          <div>
+            <a href="#">Furniture</a>
+            <hr />
+          </div>
+        </section>
+        <div class="flex flex-col text-sm text-zinc-500">
+          <a href="#" class="mb-2">Search</a>
+          <a href="#">Login</a>
+        </div>
+      </nav>
+    </div>
+  </transition>
 </template>
 
 <script>
-import { mapState, mapMutations} from "vuex";
+import { mapState, mapMutations } from "vuex";
 // import TheHeader from "./layout/TheHeader.vue";
 
 export default {
@@ -38,11 +44,16 @@ export default {
     ...mapState(["isMenuOpen"]),
   },
   methods: {
-    ...mapMutations(['toggleMenu']),
-    hideMenu(){
-      this.toggleMenu(false)
-    }
-  }
+    ...mapMutations(["toggleMenu"]),
+    hideMenu() {
+      this.toggleMenu(false);
+    },
+  },
+  watch: {
+    isMenuOpen(newVal) {
+      document.body.style.overflow = newVal ? "hidden" : "";
+    },
+  },
 };
 </script>
 
@@ -51,10 +62,13 @@ export default {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 
-.slide-enter,
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+
 .slide-leave-to {
   transform: translateX(-100%);
 }
