@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TheHeader v-if="!isMenuOpen" />
+    <TheHeader />
     <DropdownMenu />
     <router-view></router-view>
     <TheFooter />

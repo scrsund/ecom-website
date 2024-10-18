@@ -2,7 +2,7 @@
   <header class="flex justify-between items-center py-8 px-5 bg-white md:p-10">
     <div class="header-items">
       <button @click="toggleMenu" class="md:uppercase">
-        <span class="hidden md:block">Shop</span>
+        <span @mouseenter="showMenu" class="hidden md:block">Shop</span>
         <HamburgerButton></HamburgerButton>
       </button>
       <span class="hidden md:block">|</span>
@@ -26,6 +26,12 @@ export default{
   },
   methods: {
     ...mapMutations(['toggleMenu']),
+    showMenu(){
+      this.toggleMenu(true)
+    },
+    hideMenu(){
+      this.toggleMenu(false)
+    }
   }
 }
 </script>
