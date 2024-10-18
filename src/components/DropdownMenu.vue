@@ -1,38 +1,43 @@
 <template>
   <!-- <transition name="slide"> -->
-    <div v-show="isMenuOpen" id="menu" class="fixed inset-0 z-20 m-h-screen w-full h-full bg-white opacity-75 shadow-2xl">
-      <TheHeader />
-      <section class="flex flex-col space-y-5 mt-8 px-4">
-        <div>
-          <a href="#">Kitchen</a>
-          <hr>
-        </div>
-        <div>
-          <a href="#">Bowls</a>
-          <hr>
-        </div>
-        <div>
-          <a href="#">Bowls</a>
-          <hr>
-        </div>
-      </section>
-    </div>
+  <div
+    v-show="isMenuOpen"
+    id="menu"
+    class="fixed inset-0 z-20 m-h-screen w-full h-full shadow-2xl"
+  >
+    <TheHeader />
+    <section
+      class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75"
+    >
+      <div>
+        <a href="#">Kitchen</a>
+        <hr />
+      </div>
+      <div>
+        <a href="#">Lighting</a>
+        <hr />
+      </div>
+      <div>
+        <a href="#">Furniture</a>
+        <hr />
+      </div>
+    </section>
+  </div>
   <!-- </transition> -->
 </template>
 
 <script>
-import TheHeader from './layout/TheHeader.vue';
+import { mapState } from "vuex";
+import TheHeader from "./layout/TheHeader.vue";
 
-export default{
+export default {
   components: {
     TheHeader,
   },
   computed: {
-    isMenuOpen(){
-      return this.$store.state.isMenuOpen;
-    }
+    ...mapState(["isMenuOpen"]),
   },
-}
+};
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center py-8 px-5 md:p-10">
+  <header class="flex justify-between items-center py-8 px-5 bg-white md:p-10">
     <div class="header-items">
       <button @click="toggleMenu" class="md:uppercase">
         <span class="hidden md:block">Shop</span>

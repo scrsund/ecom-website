@@ -1,5 +1,5 @@
 <template>
-  <TheHeader />
+  <TheHeader v-if="!isMenuOpen"/>
   <DropdownMenu />
   <main class="h-screen w-full">
     <section
@@ -37,6 +37,7 @@
 import TheHeader from './components/layout/TheHeader.vue';
 import DropdownMenu from './components/DropdownMenu.vue';
 import TheFooter from './components/layout/TheFooter.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: "App",
@@ -44,6 +45,9 @@ export default {
     TheHeader,
     DropdownMenu,
     TheFooter,
+  },
+  computed: {
+    ...mapState(['isMenuOpen'])
   },
   data() {
     return {
