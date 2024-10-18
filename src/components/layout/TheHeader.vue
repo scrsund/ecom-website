@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center py-8 px-5 bg-white md:p-10">
+  <header class="flex justify-between items-center py-8 px-5 bg-white border-b shadow-sm md:p-10">
     <div class="header-items">
       <button @click="toggleMenu" class="md:uppercase">
         <span @mouseenter="showMenu" class="hidden md:block">Shop</span>
@@ -8,7 +8,7 @@
       <span class="hidden md:block">|</span>
       <a href="#" class="hidden md:block">Search</a>
     </div>
-    <h1 class="text-3xl tracking-widest ml-7 md:ml-0">Othelia</h1>
+    <router-link to="/home" class="text-3xl tracking-widest ml-7 md:ml-0">Othelia</router-link>
     <div class="header-items">
       <a href="#" class="hidden md:block">Account</a>
       <a href="#">Bag <span class="tracking-widest">(0)</span></a>

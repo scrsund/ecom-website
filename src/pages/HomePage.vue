@@ -35,9 +35,9 @@
 export default{
   data() {
     return {
-      img1: "/images/image1.jpg",
-      img2: "/images/image2.jpg",
-      img3: "/images/image3.jpg",
+      img1: "/images/homepage/image1.jpg",
+      img2: "/images/homepage/image2.jpg",
+      img3: "/images/homepage/image3.jpg",
     };
   },
 }

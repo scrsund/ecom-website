@@ -7,19 +7,19 @@
       @mouseleave="hideMenu"
     >
       <nav
-        class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-90"
+        class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-85"
       >
         <section id="menu">
           <div>
-            <a href="#">Kitchen</a>
+            <router-link to="/items/kitchen">Kitchen</router-link>
             <hr />
           </div>
           <div>
-            <a href="#">Lighting</a>
+            <router-link to="/items/lighting">Lighting</router-link>
             <hr />
           </div>
           <div>
-            <a href="#">Furniture</a>
+            <router-link to="/items/furniture">Furniture</router-link>
             <hr />
           </div>
         </section>
