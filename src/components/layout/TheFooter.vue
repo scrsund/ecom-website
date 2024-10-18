@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-between px-3 h-1/5 md:mx-auto md:max-w-[75%]">
+  <footer class="flex justify-between px-3 mb-10 md:mx-auto md:max-w-[75%]">
     <!-- About Container-->
      <div class="footer-container">
       <h5>Company</h5>
