@@ -7,7 +7,7 @@
       @mouseleave="hideMenu"
     >
       <nav
-        class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-85"
+        class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-90"
       >
         <section id="menu">
           <div>
@@ -49,11 +49,12 @@ export default {
       this.toggleMenu(false);
     },
   },
-  watch: {
-    isMenuOpen(newVal) {
-      document.body.style.overflow = newVal ? "hidden" : "";
-    },
-  },
+  // Stop scrolling when dropdown menu is open
+  // watch: {
+  //   isMenuOpen(newVal) {
+  //     document.body.style.overflow = newVal ? "hidden" : "";
+  //   },
+  // },
 };
 </script>
 

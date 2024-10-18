@@ -10,3 +10,21 @@ app.use(store);
 app.use(router);
 
 app.mount("#app");
+
+
+// Function to adjust main content margin
+function adjustMainMargin() {
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+  if (header && main) {
+    const headerHeight = header.offsetHeight;
+    main.style.marginTop = `${headerHeight}px`;
+  }
+}
+
+// Adjust margin on initial load
+document.addEventListener("DOMContentLoaded", adjustMainMargin);
+
+// Adjust margin on window resize
+window.addEventListener("resize", adjustMainMargin);
+
