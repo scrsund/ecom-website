@@ -9,13 +9,9 @@
       <nav
         class="flex flex-col space-y-5 h-full pt-8 px-5 bg-white opacity-75 md:opacity-90"
       >
-        <section id="menu">
+        <section id="menu" class="mb-4">
           <div>
             <router-link to="/products/kitchen">Kitchen</router-link>
-            <hr />
-          </div>
-          <div>
-            <router-link to="/products/lighting">Lighting</router-link>
             <hr />
           </div>
           <div>

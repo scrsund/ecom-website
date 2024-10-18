@@ -12,7 +12,7 @@
       >
     </section>
     <!-- Summer Sale Gallery -->
-    <section id="gallery" class="grid grid-cols-2 gap-2 mt-5">
+    <section id="gallery" class="grid grid-cols-2 gap-2 mt-4">
       <img :src="img1" alt="" class=""/>
       <img :src="img3" alt="" />
       <a href="#" class="px-3">Summer Sale</a>
