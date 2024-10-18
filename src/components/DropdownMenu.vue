@@ -23,7 +23,7 @@
             <hr />
           </div>
         </section>
-        <div class="flex flex-col text-sm text-zinc-500">
+        <div class="flex flex-col text-sm text-zinc-700">
           <a href="#" class="mb-2">Search</a>
           <a href="#">Login</a>
         </div>
