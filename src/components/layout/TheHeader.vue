@@ -1,7 +1,10 @@
 <template>
   <header class="flex justify-between items-center py-8 px-5 md:p-10">
     <div class="header-items">
-      <a href="#">Shop</a>
+      <button @click="toggleMenu" class="md:uppercase">
+        <span class="hidden md:block">Shop</span>
+        <HamburgerButton></HamburgerButton>
+      </button>
       <span class="hidden md:block">|</span>
       <a href="#" class="hidden md:block">Search</a>
     </div>
@@ -12,3 +15,17 @@
     </div>
   </header>
 </template>
+
+<script>
+import { mapMutations } from 'vuex';
+import HamburgerButton from '../UI/HamburgerButton.vue';
+
+export default{
+  components: {
+    HamburgerButton,
+  },
+  methods: {
+    ...mapMutations(['toggleMenu']),
+  }
+}
+</script>

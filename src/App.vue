@@ -1,5 +1,6 @@
 <template>
   <TheHeader />
+  <DropdownMenu />
   <main class="h-screen w-full">
     <section
       id="hero"
@@ -33,13 +34,15 @@
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue';
-import TheFooter from './components/TheFooter.vue';
+import TheHeader from './components/layout/TheHeader.vue';
+import DropdownMenu from './components/DropdownMenu.vue';
+import TheFooter from './components/layout/TheFooter.vue';
 
 export default {
   name: "App",
   components: {
     TheHeader,
+    DropdownMenu,
     TheFooter,
   },
   data() {

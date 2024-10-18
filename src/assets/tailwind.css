@@ -6,6 +6,10 @@ body {
   @apply uppercase;
 }
 
+hr {
+  @apply mt-4 border-black;
+}
+
 .header-items{
   @apply flex space-x-4 text-xs text-zinc-500;
 }
@@ -16,4 +20,57 @@ body {
 
 footer h5 {
   @apply text-base mb-2
+}
+
+/*Hamburger Menu*/
+
+.hamburger {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.4s;
+  @apply bg-zinc-500 mt-1;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+
+  @apply bg-zinc-500
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  @apply bg-zinc-500
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  @apply bg-zinc-500
 }
