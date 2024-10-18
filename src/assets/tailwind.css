@@ -11,7 +11,7 @@ hr {
 }
 
 .header-items{
-  @apply flex space-x-4 text-xs text-zinc-500;
+  @apply flex flex-1 space-x-4 text-xs text-zinc-500;
 }
 
 .footer-container{
