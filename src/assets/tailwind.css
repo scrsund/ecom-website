@@ -16,7 +16,7 @@ hr {
   @apply mt-2 border-black;
 }
 
-#menu div {
+#dropdown-menu div {
   @apply p-2
 }
 

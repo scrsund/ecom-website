@@ -2,7 +2,7 @@
   <transition name="slide">
     <div
       v-show="isMenuOpen"
-      id="menu"
+      id="dropdown-menu"
       class="fixed z-20 h-full w-full shadow-2xl md:w-1/3"
       @mouseleave="hideMenu"
     >
