@@ -4,7 +4,7 @@
       <div class="header-items justify-start">
         <button @click="toggleMenu" class="md:uppercase">
           <span @mouseenter="showMenu" class="hidden md:block">Shop</span>
-          <HamburgerButton></HamburgerButton>
+          <HamburgerButton class="md:hidden"></HamburgerButton>
         </button>
         <span class="hidden md:block">|</span>
         <a href="#" class="hidden md:block">Search</a>

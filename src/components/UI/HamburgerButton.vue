@@ -1,5 +1,5 @@
 <template>
-  <div :class="['hamburger md:hidden', buttonClass]">
+  <div :class="['hamburger', buttonClass]">
     <span class="hamburger-top"></span>
     <span class="hamburger-middle"></span>
     <span class="hamburger-bottom"></span>
