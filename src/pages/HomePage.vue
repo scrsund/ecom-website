@@ -16,17 +16,17 @@
       <div class="relative grid grid-cols-2 gap-2">
         <img :src="img1" alt="" class=""/>
         <img :src="img3" alt="" />
-        <a href="#" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200">Summer Sale (up to 50% off)</a>
+        <a href="#" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-base">Summer Sale (up to 50% off)</a>
       </div>
     </section>
     <!-- Call to action -->
     <section id="sign-up" class="flex flex-col justify-center items-center space-y-4 my-20 md:mb-32">
-      <h2>Get exclusive deals</h2>
+      <h2 class="tracking-widest">Get exclusive deals</h2>
       <div class="flex flex-col w-1/2 max-w-md">
         <div class="border-b border-black">
           <input type="email" class="tracking-wide text-sm w-full placeholder:text-[12px] placeholder:uppercase placeholder:tracking-wide focus:outline-none" placeholder="email address">
         </div>
-        <button class="uppercase text-xs mt-2 text-right">Subscribe</button>
+        <button class="uppercase text-xs mt-2 text-right tracking-wide">Subscribe</button>
       </div>
     </section>
     </main>
