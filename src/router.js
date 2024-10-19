@@ -11,6 +11,9 @@ const router = createRouter({
     { path: "/home", component: HomePage },
     { path: "/products/:category", component: ProductList },
   ],
+  scrollBehavior(){
+    return { top: 0};
+  },
 });
 
 router.beforeEach((to, from, next) => {
