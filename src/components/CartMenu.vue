@@ -3,18 +3,28 @@
   <transition name="slide">
     <div v-show="isOpen" class="fixed top-0 right-0 z-40 h-full">
       <!-- Menu Container -->
-      <div class="z-50 flex flex-col h-full w-[400px] bg-white shadow-xl">
-        <!-- Close button -->
-        <button @click="closeCart" class="z-100 py-4 px-6 flex justify-end">
-          <HamburgerButton class="open" />
-        </button>
+      <div class="z-50 flex flex-col h-full w-[350px] bg-white shadow-xl border-t-4 border-slate-600">
+        <!-- Header -->
+          <h1 class="tracking-widest text-2xl relative flex justify-center py-8">Othelia</h1>
+           <!-- Close button -->
+           <button @click="closeCart" class="absolute z-100 p-4 right-0">
+             <HamburgerButton class="open" />
+           </button>
         <!-- Content Container -->
         <section>
           <div v-if="this.$store.getters.cart === 0" class="text-center">
             Your bag is empty
           </div>
-          <div v-else class="text-center">
-            You have {{ this.$store.getters.cart }} items in your bag
+          <div v-else>
+            <div v-for="item in cartItems" :key="item.id" class="flex py-4 px-4">
+              <img :src="item.img" alt="" class="h-[200px] w-[150px] object-cover">
+              <div class="flex flex-col mx-4">
+                <h5 class="text-sm">{{item.name}}</h5>
+                <!-- Price -->
+                <!-- Quantity -->
+                <!-- delete -->
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -32,6 +42,7 @@ export default {
   },
   computed: {
     ...mapState({ isOpen: (state) => state.cart.isOpen }),
+    ...mapState({cartItems: (state) => state.cart.cartItems})
   },
   methods: {
     ...mapMutations({
