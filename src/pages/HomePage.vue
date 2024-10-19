@@ -16,13 +16,13 @@
       <div class="relative grid grid-cols-2 gap-2">
         <img :src="img1" alt="" class=""/>
         <img :src="img3" alt="" />
-        <router-link to="/products/kitchen" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-base">Summer Sale</router-link>
+        <router-link to="/products/kitchen" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-base">Summer Sale (up to 30% off)</router-link>
       </div>
     </section>
     <!-- Call to action -->
     <section id="sign-up" class="flex flex-col justify-center items-center space-y-4 my-20 md:mb-32">
       <h2 class="tracking-widest">Get exclusive deals</h2>
-      <div class="flex flex-col w-1/2 max-w-md">
+      <div class="flex flex-col w-2/3 max-w-md">
         <div class="border-b border-black">
           <input type="email" class="tracking-wide text-sm w-full placeholder:text-[12px] placeholder:uppercase placeholder:tracking-wide focus:outline-none" placeholder="email address">
         </div>
