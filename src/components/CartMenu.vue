@@ -1,22 +1,22 @@
 <template>
   <!-- Page Outline  v-show="isOpen" -->
-  <transition>
+  <transition name="slide">
     <div v-show="isOpen" class="fixed top-0 right-0 z-40 h-full">
       <!-- Menu Container -->
-      <div class="z-50 flex flex-col h-full w-[350px] bg-white shadow-xl">
+      <div class="z-50 flex flex-col h-full w-[400px] bg-white shadow-xl">
         <!-- Close button -->
         <button @click="closeCart" class="z-100 py-4 px-6 flex justify-end">
           <HamburgerButton class="open" />
         </button>
         <!-- Content Container -->
-        <div>
-          <h1 v-if="this.$store.getters.cart === 0" class="text-center">
+        <section>
+          <div v-if="this.$store.getters.cart === 0" class="text-center">
             Your bag is empty
-          </h1>
-          <h1 v-else class="text-center">
+          </div>
+          <div v-else class="text-center">
             You have {{ this.$store.getters.cart }} items in your bag
-          </h1>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   </transition>
@@ -40,13 +40,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/*Animations*/
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+}
+</style>
 <!-- 
-
-w- 1/4 of screen
-
-"Your bag is empty"
-
-close button
 
 Product:
 
