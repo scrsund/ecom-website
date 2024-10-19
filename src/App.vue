@@ -1,7 +1,6 @@
 <template>
   <main>
     <TheHeader />
-    <DropdownMenu />
     <router-view></router-view>
     <TheFooter />
   </main>
@@ -9,7 +8,6 @@
 
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
-import DropdownMenu from "./components/DropdownMenu.vue";
 import TheFooter from "./components/layout/TheFooter.vue";
 import { mapState } from "vuex";
 
@@ -17,7 +15,6 @@ export default {
   name: "App",
   components: {
     TheHeader,
-    DropdownMenu,
     TheFooter,
   },
   computed: {

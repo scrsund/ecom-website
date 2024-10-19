@@ -16,15 +16,18 @@
       </div>
     </div>
   </header>
+  <DropdownMenu/>
 </template>
 
 <script>
 import { mapMutations} from 'vuex';
 import HamburgerButton from '../UI/HamburgerButton.vue';
+import DropdownMenu from '../DropdownMenu.vue';
 
 export default{
   components: {
     HamburgerButton,
+    DropdownMenu
   },
   methods: {
     ...mapMutations(['toggleMenu']),
