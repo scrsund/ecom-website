@@ -4,7 +4,7 @@
       id="hero"
       class="relative flex items-center justify-center w-full h-[42rem]"
     >
-      <img :src="img2" alt="" class="absolute h-full w-full object-cover object-center" />
+      <img :src="heroImg" alt="" class="absolute h-full w-full object-cover object-center" />
       <router-link
         to="/products/furniture"
         class="z-10 border border-2 border-slate-600 p-4 text-zinc-300 shadow-xl text-md duration-300 tracking-wider bg-slate-600 opacity-90 text-xs hover:opacity-70 md:text-sm"
@@ -37,8 +37,8 @@
 export default{
   data() {
     return {
+      heroImg: "/images/homepage/image2.jpg",
       img1: "/images/homepage/image1.jpg",
-      img2: "/images/homepage/image2.jpg",
       img3: "/images/homepage/image3.jpg",
     };
   },
