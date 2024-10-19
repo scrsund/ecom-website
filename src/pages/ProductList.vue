@@ -6,7 +6,7 @@
     <!-- Gallery Container -->
     <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       <!-- Product Container -->
-      <div v-for="product in products" :key="product.id">
+      <div v-for="product in products" :key="product.id" class="mt-4">
         <div class="relative group">
           <img :src="product.img" class="h-[300px] w-full object-cover">
           <div class="banner">
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <ul class="py-1 mb-4 ml-1">
+        <ul class="py-2 mb-4 ml-1">
           <li>{{product.name}}</li>
           <li>${{product.price}}</li>
         </ul>

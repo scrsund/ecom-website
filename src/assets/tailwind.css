@@ -87,9 +87,9 @@ hr {
 
 /*Footer*/
 .footer-container{
-  @apply flex flex-col space-y-2 text-xs;
+  @apply flex flex-col space-y-2 text-[11px];
 }
 
 footer h5 {
-  @apply text-base mb-2
+  @apply text-base mb-2 text-sm
 }

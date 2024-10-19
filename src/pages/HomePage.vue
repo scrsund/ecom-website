@@ -12,10 +12,12 @@
       >
     </section>
     <!-- Summer Sale Gallery -->
-    <section id="gallery" class="grid grid-cols-2 gap-2 mt-4">
-      <img :src="img1" alt="" class=""/>
-      <img :src="img3" alt="" />
-      <a href="#" class="px-3">Summer Sale</a>
+    <section id="gallery" class="mt-4">
+      <div class="relative grid grid-cols-2 gap-2">
+        <img :src="img1" alt="" class=""/>
+        <img :src="img3" alt="" />
+        <a href="#" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200">Summer Sale (up to 50% off)</a>
+      </div>
     </section>
     <!-- Call to action -->
     <section id="sign-up" class="flex flex-col justify-center items-center space-y-4 my-20 md:mb-32">
