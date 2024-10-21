@@ -8,6 +8,8 @@ export default {
           name: "Mixing bowl",
           price: 39.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
         {
           id: "2",
@@ -15,6 +17,8 @@ export default {
           name: "Leaf plates (set of 4)",
           price: 49.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
         {
           id: "3",
@@ -22,6 +26,8 @@ export default {
           name: "Ceramic bowl",
           price: 19.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
         {
           id: "4",
@@ -29,6 +35,8 @@ export default {
           name: "Porcelain dining set",
           price: 59.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
         {
           id: "5",
@@ -36,6 +44,8 @@ export default {
           name: "Metal bowl",
           price: 34.99,
           quantity: 0,
+          sale: true,
+          discount: .40,
         },
       ],
       furniture: [
@@ -45,6 +55,8 @@ export default {
           name: "Clay vase",
           price: 49.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
         {
           id: "2",
@@ -52,6 +64,8 @@ export default {
           name: "Wicker chair",
           price: 119.99,
           quantity: 0,
+          sale: false,
+          discount: 0,
         },
       ],
     };

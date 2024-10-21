@@ -30,12 +30,20 @@
                 alt=""
                 class="h-[150px] w-[120px] object-cover border border-zinc-100"
               />
-              <ul id="cart-list" class="flex flex-col text-sm w-2/3 pl-4">
-                <div class="flex justify-between items-center mb-2">
+              <ul id="cart-list" class="flex flex-col justify-between text-sm w-2/3 pl-4">
+                <div class="flex justify-between mb-2">
                   <li>{{ item.name }}</li>
-                  <li>${{ item.price }}</li>
+                  <li v-if="item.sale">
+                    <div class="text-right">
+                      <div>
+                        ${{ parseFloat(item.price * (1 - item.discount)).toFixed(2) }}
+                      </div>
+                      <div class="line-through text-[11px]">${{item.price}}</div>
+                    </div>
+                  </li>
+                  <li v-else>${{item.price}}</li>
                 </div>
-                <li id="quantity">
+                <li id="quantity" class="mb-20">
                   <span>
                     <button
                       @click="updateQuantity(item.id, item.quantity - 1)"

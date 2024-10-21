@@ -16,7 +16,7 @@
       <div class="relative grid grid-cols-2 gap-2">
         <img :src="img1" alt="" class=""/>
         <img :src="img3" alt="" />
-        <router-link to="/products/kitchen" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-base">Summer Sale (up to 30% off)</router-link>
+        <router-link to="/products/kitchen" class="absolute w-full px-3 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-base">Summer Sale (up to 40% off)</router-link>
       </div>
     </section>
     <!-- Call to action -->

@@ -12,7 +12,10 @@ export default{
       return state.totalCartItems;
     },
     cartSubtotal(state){
-      const subtotal = state.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      const subtotal = state.cartItems.reduce((total, item) => {
+        const itemPrice = item.sale ? item.price * (1 - item.discount) : item.price;
+        return total + itemPrice * item.quantity;
+      }, 0);
       return parseFloat(subtotal.toFixed(2));
     }
   },
