@@ -30,19 +30,29 @@
                 alt=""
                 class="h-[150px] w-[120px] object-cover border border-zinc-100"
               />
-              <ul id="cart-list" class="flex flex-col mx-4 text-xs">
-                <li>{{ item.name }}</li>
-                <li>${{ item.price }}</li>
+              <ul id="cart-list" class="flex flex-col text-sm w-2/3 pl-4">
+                <div class="flex justify-between items-center mb-2">
+                  <li>{{ item.name }}</li>
+                  <li>${{ item.price }}</li>
+                </div>
                 <li id="quantity">
                   <span>
-                    <button @click="updateQuantity(item.id, item.quantity - 1)" :disabled="item.quantity <= 1">-</button>
+                    <button
+                      @click="updateQuantity(item.id, item.quantity - 1)"
+                    >
+                      -
+                    </button>
                     {{ item.quantity }}
-                    <button @click="updateQuantity(item.id, item.quantity + 1)">+</button>
+                    <button @click="updateQuantity(item.id, item.quantity + 1)">
+                      +
+                    </button>
                   </span>
                 </li>
-                <button @click="removeItems(item.id)" class="border">
-                  Delete
-                </button>
+                <!-- <li>
+                  <button @click="removeItems(item.id)" class="uppercase text-[10px]">
+                    Delete
+                  </button>
+                </li> -->
               </ul>
             </div>
             <div id="checkout" class="flex flex-col">
@@ -84,13 +94,11 @@ export default {
     ...mapMutations({
       closeCart: "closeCart",
       removeItems: "removeItemFromCart",
-      updateItemQuantity: 'updateItemQuantity'
+      updateItemQuantity: "updateItemQuantity",
     }),
-    updateQuantity(productId, quantity){
-      if(quantity > 0){
-        this.updateItemQuantity({ productId, quantity})
-      }
-    }
+    updateQuantity(productId, quantity) {
+        this.updateItemQuantity({ productId, quantity });
+    },
   },
 };
 </script>

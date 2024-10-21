@@ -6,9 +6,6 @@
   #product-list li {
     @apply text-xs tracking-wide;
   }
-  #cart-list li {
-    @apply py-1
-  }
 }
 
 body {

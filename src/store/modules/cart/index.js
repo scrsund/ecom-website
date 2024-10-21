@@ -37,8 +37,14 @@ export default{
     updateItemQuantity(state, {productId, quantity}){
       const item = state.cartItems.find(item => item.id === productId);
       if(item){
+        if(quantity <= 0){
+          const index = state.cartItems.indexOf(item);
+          state.cartItems.splice(index, 1);
+          state.totalCartItems -= item.quantity;
+        } else {
         state.totalCartItems += quantity - item.quantity;
         item.quantity = quantity;
+        }
       }
     },
     toggleCart(state){
