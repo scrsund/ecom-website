@@ -12,26 +12,40 @@ export default{
       return state.totalCartItems;
     },
     cartSubtotal(state){
-      return state.cartItems.reduce((total, item) => total + item.price, 0)
+      const subtotal = state.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      return parseFloat(subtotal.toFixed(2));
     }
   },
   mutations: {
     addItemToCart(state, product){
+      const existingItem = state.cartItems.find(item => item.id === product.id);
+      if(existingItem){
+        existingItem.quantity += 1;
+      } else {
+        state.cartItems.push({...product, quantity: 1});
+      }
       state.totalCartItems++;
-      state.cartItems.push(product);
+    },
+    removeItemFromCart(state, productId){
+      const index = state.cartItems.findIndex(item => item.id === productId);
+      if(index !== -1){
+        const item = state.cartItems[index];
+        state.totalCartItems -= item.quantity;
+        state.cartItems.splice(index, 1);
+      }
+    },
+    updateItemQuantity(state, {productId, quantity}){
+      const item = state.cartItems.find(item => item.id === productId);
+      if(item){
+        state.totalCartItems += quantity - item.quantity;
+        item.quantity = quantity;
+      }
     },
     toggleCart(state){
       state.isOpen = !state.isOpen;
     },
     closeCart(state){
       state.isOpen = false;
-    },
-    removeItemFromCart(state, productId){
-      const index = state.cartItems.findIndex(item => item.id === productId);
-      if(index !== -1){
-        state.cartItems.splice(index, 1);
-        state.totalCartItems--;
-      }
     },
   }
 }
