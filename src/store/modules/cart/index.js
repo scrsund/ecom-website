@@ -4,11 +4,15 @@ export default{
       isOpen: false,
       totalCartItems: 0,
       cartItems: [],
+      subtotal: 0,
     }
   },
   getters: {
     cart(state){
       return state.totalCartItems;
+    },
+    cartSubtotal(state){
+      return state.cartItems.reduce((total, item) => total + item.price, 0)
     }
   },
   mutations: {
@@ -28,6 +32,6 @@ export default{
         state.cartItems.splice(index, 1);
         state.totalCartItems--;
       }
-    }
+    },
   }
 }

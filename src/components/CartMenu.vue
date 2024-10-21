@@ -25,8 +25,11 @@
                 <button @click="removeItems(item.id)" class="border">Delete</button>
               </ul>
             </div>
+            <div class="flex justify-between px-5 py-3 mt-10 border-t-2 border-slate-200">
+              <div>Subtotal</div>
+              <div>${{cartSubtotal}}</div>
+            </div>
           </div>
-          <div>Subtotal</div>
         </section>
       </div>
     </div>
@@ -43,7 +46,10 @@ export default {
   },
   computed: {
     ...mapState({ isOpen: (state) => state.cart.isOpen }),
-    ...mapState({cartItems: (state) => state.cart.cartItems})
+    ...mapState({cartItems: (state) => state.cart.cartItems}),
+    cartSubtotal(){
+      return this.$store.getters.cartSubtotal;
+    }
   },
   methods: {
     ...mapMutations({
