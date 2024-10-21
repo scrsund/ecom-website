@@ -9,15 +9,15 @@
       <div v-for="product in products" :key="product.id" class="mt-4">
         <div class="relative group">
           <img :src="product.img" class="h-[300px] w-full object-cover">
-          <div class="banner">
+          <div @click="addItemToCart(product)" class="banner">
             <div class="flex justify-center items-center">
-              <button @click="handleAddToCart(product)" class="uppercase tracking-wider">
+              <button class="uppercase tracking-wider">
                 Add to cart
               </button>
             </div>
           </div>
         </div>
-        <ul class="py-2 mb-4 ml-1">
+        <ul id="product-list" class="py-2 mb-4 ml-1">
           <li>{{product.name}}</li>
           <li>${{product.price}}</li>
         </ul>
@@ -45,9 +45,6 @@ export default {
     ...mapMutations({
       addItemToCart: 'addItemToCart'
     }),
-    handleAddToCart(product){
-      this.addItemToCart(product);
-    }
   }
 };
 </script>

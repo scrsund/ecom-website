@@ -11,21 +11,22 @@
              <HamburgerButton class="open" />
            </button>
         <!-- Content Container -->
-        <section>
+        <section class="flex-1 overflow-y-auto py-2">
           <div v-if="this.$store.getters.cart === 0" class="text-center">
             Your bag is empty
           </div>
           <div v-else>
             <div v-for="item in cartItems" :key="item.id" class="flex py-4 px-4">
-              <img :src="item.img" alt="" class="h-[200px] w-[150px] object-cover">
-              <div class="flex flex-col mx-4">
-                <h5 class="text-sm">{{item.name}}</h5>
-                <!-- Price -->
-                <!-- Quantity -->
-                <!-- delete -->
-              </div>
+              <img :src="item.img" alt="" class="h-[150px] w-[120px] object-cover border border-zinc-100">
+              <ul id="cart-list" class="flex flex-col mx-4 text-xs">
+                <li>{{item.name}}</li>
+                <li>${{item.price}}</li>
+                <li>Qnt: 1</li>
+                <button @click="removeItems(item.id)" class="border">Delete</button>
+              </ul>
             </div>
           </div>
+          <div>Subtotal</div>
         </section>
       </div>
     </div>
@@ -47,6 +48,7 @@ export default {
   methods: {
     ...mapMutations({
       closeCart: "closeCart",
+      removeItems: "removeItemFromCart",
     }),
   },
 };

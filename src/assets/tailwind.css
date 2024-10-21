@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  li {
+  #product-list li {
     @apply text-xs tracking-wide;
   }
 }

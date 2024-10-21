@@ -22,5 +22,12 @@ export default{
     closeCart(state){
       state.isOpen = false;
     },
+    removeItemFromCart(state, productId){
+      const index = state.cartItems.findIndex(item => item.id === productId);
+      if(index !== -1){
+        state.cartItems.splice(index, 1);
+        state.totalCartItems--;
+      }
+    }
   }
 }
