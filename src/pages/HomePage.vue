@@ -37,7 +37,7 @@
 export default{
   data() {
     return {
-      heroImg: "/images/homepage/image2.jpg",
+      heroImg: "/images/homepage/hero.jpeg",
       img1: "/images/homepage/image1.jpg",
       img3: "/images/homepage/image3.jpg",
     };
