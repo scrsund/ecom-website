@@ -21,7 +21,11 @@ hr {
 }
 
 .banner {
-  @apply absolute bottom-0 left-0 right-0 p-4 text-xs text-zinc-300 bg-zinc-600 opacity-0 cursor-pointer duration-500 group-hover:opacity-100 bg-opacity-60
+  @apply absolute bottom-0 left-0 right-0 p-4 text-xs text-zinc-300 bg-zinc-600 opacity-0 rounded-sm cursor-pointer duration-500 group-hover:opacity-100 bg-opacity-60
+}
+
+.clicked {
+  @apply absolute bottom-0 left-0 right-0 p-4 text-xs text-zinc-500 bg-zinc-600 opacity-0 rounded-sm cursor-pointer duration-500 group-hover:opacity-100 bg-opacity-60
 }
 
 

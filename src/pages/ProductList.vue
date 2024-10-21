@@ -9,7 +9,7 @@
       <div v-for="product in products" :key="product.id" class="mt-4">
         <div class="relative group">
           <img :src="product.img" class="h-[300px] w-full object-cover">
-          <div @click="addItemToCart(product)" class="banner">
+          <div :class="{'clicked': isBannerClicked, 'banner': !isBannerClicked}" @click="addItemToCart(product)" @mousedown="changeColor">
             <div class="flex justify-center items-center">
               <button class="uppercase tracking-wider">
                 Add to cart
@@ -30,6 +30,11 @@
 import { mapState, mapMutations } from 'vuex';
 
 export default {
+  data(){
+    return {
+      isBannerClicked: false,
+    }
+  },
   computed: {
     ...mapState({
       products(state){
@@ -45,6 +50,12 @@ export default {
     ...mapMutations({
       addItemToCart: 'addItemToCart'
     }),
+    changeColor(){
+      this.isBannerClicked = true;
+      setTimeout(() => {
+        this.isBannerClicked = false;
+      }, 350)
+    },
   }
 };
 </script>
