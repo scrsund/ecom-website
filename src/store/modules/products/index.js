@@ -14,7 +14,7 @@ export default {
         {
           id: "2",
           img: "/images/products/kitchen/img2.jpg",
-          name: "Leaf plates (set of 4)",
+          name: "Leaf plates",
           price: 49.99,
           quantity: 0,
           sale: false,
