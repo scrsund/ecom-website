@@ -21,7 +21,7 @@ hr {
 }
 
 #gallery img {
-  @apply w-full h-2/3 object-cover;
+  @apply w-full object-contain;
 }
 
 .banner {

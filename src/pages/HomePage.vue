@@ -13,7 +13,7 @@
     </section>
     <!-- Summer Sale Gallery -->
     <section id="gallery" class="mt-4">
-      <div class="relative grid grid-cols-2 gap-2 h-[38rem]">
+      <div class="relative grid grid-cols-2 gap-2">
         <img :src="img1" alt="Picnic Basket" />
         <img :src="img3" alt="Gardening Boots" />
         <router-link to="/products/kitchen" class="absolute w-full px-3 py-1 bottom-0 text-xs border border-slate-200 bg-slate-200 md:text-sm">Summer Sale (up to 40% off)</router-link>
